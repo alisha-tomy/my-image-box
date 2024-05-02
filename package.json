@@ -1,0 +1,19 @@
+{
+  "name": "my-image-box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:backend": "cd backend && pip install -r requirements.txt && mkdir static",
+    "install:frontend": "cd frontend && npm install",
+    "install": "npm run install:backend && npm run install:frontend",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && flask run",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+  },  
+  "author": "Alisha Tomy",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
